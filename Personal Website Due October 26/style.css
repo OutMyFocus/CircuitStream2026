@@ -1,14 +1,146 @@
-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 20px;
-  background-color: #ffffff;
-  position: sticky;
-  top: 0;
+/* Colours taken from the logo */
+:root {
+  --cream: #faf6f2;
+  --blush: #f3c2bb;
+  --brick: #8b3f3a;
+  --brick-dark: #6e2f2b;
+  --ink: #3a2e2c;
 }
 
-#logo img {
-  height: 60px;
+body {
+  background-color: var(--cream);
+  color: var(--ink);
+  font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- Header / navbar ---------- */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1030; /* keeps the navbar above the slideshow when scrolling */
+  background-color: rgba(250, 246, 242, 0.9);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(139, 63, 58, 0.12);
+}
+
+.logo {
+  height: 44px;
   width: auto;
+}
+
+.nav-link {
+  color: var(--ink);
+  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-left: 1rem;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--brick) !important;
+}
+
+/* ---------- Homepage hero ---------- */
+.hero {
+  flex: 1; /* pushes the footer to the bottom of the screen */
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.eyebrow {
+  color: var(--brick);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+#title {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.05;
+  margin-bottom: 1.5rem;
+}
+
+#title em {
+  color: var(--brick);
+}
+
+.intro {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #6b5d5a;
+  max-width: 34rem;
+}
+
+/* ---------- Buttons ---------- */
+.btn-brand,
+.btn-outline-brand {
+  padding: 0.75rem 1.75rem;
+  border-radius: 999px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  transition: all 0.2s ease;
+}
+
+.btn-brand {
+  background-color: var(--brick);
+  border: 2px solid var(--brick);
+  color: #fff;
+}
+
+.btn-brand:hover {
+  background-color: var(--brick-dark);
+  border-color: var(--brick-dark);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.btn-outline-brand {
+  border: 2px solid var(--brick);
+  color: var(--brick);
+}
+
+.btn-outline-brand:hover {
+  background-color: var(--blush);
+  color: var(--brick-dark);
+  transform: translateY(-2px);
+}
+
+/* ---------- Slideshow ---------- */
+#slideshow {
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(58, 46, 44, 0.35);
+}
+
+#slideshow img {
+  height: clamp(300px, 60vh, 560px);
+  object-fit: cover;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.85rem;
+  color: #9a8a86;
+  border-top: 1px solid rgba(139, 63, 58, 0.12);
+}
+
+footer p {
+  margin: 0;
 }
