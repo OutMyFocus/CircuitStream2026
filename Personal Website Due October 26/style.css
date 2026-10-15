@@ -45,8 +45,9 @@ header {
   color: var(--brick) !important;
 }
 
-/* ---------- Homepage hero ---------- */
-.hero {
+/* ---------- Main content (homepage hero and other pages) ---------- */
+.hero,
+.page {
   flex: 1; /* pushes the footer to the bottom of the screen */
   padding-top: 4rem;
   padding-bottom: 4rem;
