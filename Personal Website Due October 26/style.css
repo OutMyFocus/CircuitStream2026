@@ -145,3 +145,9 @@ footer {
 footer p {
   margin: 0;
 }
+
+/* ---------- Project Page ---------- */
+.Projects {
+  display: grid;
+  border-style: double;
+}
