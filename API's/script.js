@@ -1,4 +1,9 @@
-fetch("http://10.0.0.49:8989", {
-method: "GET",
-const API: "94918abe4bc340368336e38e65a02729";
-})
+fetch("https://api.scryfall.com/cards/search?order=cmc&q=c%3Ared+pow%3D3").then(
+  (Response) => Response.json(),
+);
+
+const Card = document.querySelector("#Card-button");
+const setupElement = document.querySelector("#setup");
+
+
+
